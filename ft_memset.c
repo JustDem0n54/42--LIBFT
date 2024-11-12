@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 11:11:49 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/12 17:56:03 by nrontard         ###   ########.fr       */
+/*   Created: 2024/11/12 14:27:43 by nrontard          #+#    #+#             */
+/*   Updated: 2024/11/12 16:43:08 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __libft_h
-#define __libft_h
+#include "libft.h"
 
-#include <unistd.h>
-int ft_isalnum(int c);
-int ft_isalpha(int c);
-int ft_isascii(int c);
-int ft_isdigit(int c);
-int ft_isprint(int c);
-size_t ft_strlen(const char *s);
-void *ft_memset(void *s, int c, size_t n);
-void ft_bzero(void *s,  size_t n);
-void *ft_memcpy(void *dest_str, const void *src_str, size_t n);
+void *ft_memset(void *s, int c, size_t n)
+{
+	unsigned char *str;
+	int i;
+	
+	str = s;
+	while (n > 0)
+	{
+		*str++ = c;
+		n--;
+	}
+	return(s);
+}
 
-#endif // __libft_h
+// #include <stdio.h>
+
+// int main(void)
+// {
+// 	char str[50] = "test test test test";
+// 	printf("%s\n", str);
+// 	ft_memset(str + 5, 98, 25);
+// 	printf("%s\n", str);
+// 	return(0);
+// }

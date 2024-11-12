@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 11:11:49 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/12 17:56:03 by nrontard         ###   ########.fr       */
+/*   Created: 2024/11/12 12:27:16 by nrontard          #+#    #+#             */
+/*   Updated: 2024/11/12 14:13:01 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __libft_h
-#define __libft_h
+#include "libft.h"
 
-#include <unistd.h>
-int ft_isalnum(int c);
-int ft_isalpha(int c);
-int ft_isascii(int c);
-int ft_isdigit(int c);
-int ft_isprint(int c);
-size_t ft_strlen(const char *s);
-void *ft_memset(void *s, int c, size_t n);
-void ft_bzero(void *s,  size_t n);
-void *ft_memcpy(void *dest_str, const void *src_str, size_t n);
+int ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return(1);
+	else
+		return(0);
+}
 
-#endif // __libft_h
+// #include <stdio.h>
+
+// int main(void)
+// {
+// 	printf("%d\n", ft_isdigit(98));
+// 	printf("%d\n", ft_isdigit('1'));
+// 	printf("%d\n", ft_isdigit('/'));
+// }

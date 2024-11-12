@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 11:11:49 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/12 17:56:03 by nrontard         ###   ########.fr       */
+/*   Created: 2024/11/12 17:22:03 by nrontard          #+#    #+#             */
+/*   Updated: 2024/11/12 17:53:59 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __libft_h
-#define __libft_h
+#include "libft.h"
 
-#include <unistd.h>
-int ft_isalnum(int c);
-int ft_isalpha(int c);
-int ft_isascii(int c);
-int ft_isdigit(int c);
-int ft_isprint(int c);
-size_t ft_strlen(const char *s);
-void *ft_memset(void *s, int c, size_t n);
-void ft_bzero(void *s,  size_t n);
-void *ft_memcpy(void *dest_str, const void *src_str, size_t n);
+void *ft_memcpy(void *dest_str, const void *src_str, size_t n)
+{
+	unsigned char *dest;
+	unsigned const char *src;
+	
+	dest = dest_str;
+	src = src_str;
+	while (n > 0)
+	{
+		*dest++ = *src++;
+		n--;
+	}
+	return(dest);
+}
 
-#endif // __libft_h
+#include <stdio.h>
+
+int main(void)
+{
+	char dest[20] = "Bonjour";
+	char src[] = "Hello World !";
+	printf("%s\n", dest);
+	ft_memcpy(dest, src, 14);
+	printf("%s", dest);
+}
