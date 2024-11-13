@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:23:06 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/12 16:50:15 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/13 10:50:07 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ void ft_bzero(void *s,  size_t n)
 	}
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-	char str[19] = "test test test test";
-	printf("%s\n", str);
-	ft_bzero(str, sizeof(str));
-	printf("%s\n", str);
-	return(0);
-}
+// int main(void)
+// {
+// 	char str[19] = "test test test test";
+// 	printf("%s\n", str);
+// 	ft_bzero(str, sizeof(str));
+// 	printf("%s\n", str);
+// 	return(0);
+// }
