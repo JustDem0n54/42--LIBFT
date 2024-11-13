@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 14:27:43 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/13 13:45:57 by nrontard         ###   ########.fr       */
+/*   Created: 2024/11/13 14:47:24 by nrontard          #+#    #+#             */
+/*   Updated: 2024/11/13 15:38:09 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+char *ft_strrchr(const char *str, int c)
 {
-	unsigned char *str;
+	int i;
 	
-	str = s;
-	while (n > 0)
+	i = 0;
+	while (str[i])
+		i++;
+	while (str[i] != c && i > 0)
 	{
-		*str++ = c;
-		n--;
+		i--;
+		if (str[i] == c)
+			return ((char*)str + i);
 	}
-	return(s);
+	return (NULL);
 }
-
-// #include <stdio.h>
 
 // int main(void)
 // {
-// 	char str[50] = "test test test test";
-// 	printf("%s\n", str);
-// 	ft_memset(str + 5, 98, 25);
-// 	printf("%s\n", str);
-// 	return(0);
+// 	printf("%s\n", ft_strrchr("Bonjour", 'o'));
 // }

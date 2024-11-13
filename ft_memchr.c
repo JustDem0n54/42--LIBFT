@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 14:27:43 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/13 13:45:57 by nrontard         ###   ########.fr       */
+/*   Created: 2024/11/13 16:03:55 by nrontard          #+#    #+#             */
+/*   Updated: 2024/11/13 16:16:01 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void *ft_memchr(const void *str, int c, size_t n)
 {
-	unsigned char *str;
+	int i;
+	const char *s;
 	
-	str = s;
-	while (n > 0)
+	i = 0;
+	s = str;
+	while (s[i] && n-- > 0)
 	{
-		*str++ = c;
-		n--;
+		if (s[i] == c) 
+			return ((char*)str + i);	
+		i++;
 	}
-	return(s);
+	return (NULL);
 }
 
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char str[50] = "test test test test";
-// 	printf("%s\n", str);
-// 	ft_memset(str + 5, 98, 25);
-// 	printf("%s\n", str);
-// 	return(0);
-// }
+int main(void)
+{
+	char *result;
+	result = ft_memchr("Bonjour", 'j', 3);
+	printf("%s", result);
+}

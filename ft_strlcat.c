@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:40:30 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/13 12:44:00 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:47:22 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,13 @@ size_t	ft_strlcat(char *s1, const char *s2, size_t n)
 	return (j + ft_strlen(s2));
 }
 
-int main(void)
-{
-	char dest[20] = "hello ";
-	char src[] = "World !";
-	printf("%s\n", dest);
-	printf("%zu\n", ft_strlcat(dest, src, 20));
-	printf("%s\n", dest);
+// int main(void)
+// {
+// 	char dest[20] = "hello ";
+// 	char src[] = "World !";
+// 	printf("%s\n", dest);
+// 	printf("%zu\n", ft_strlcat(dest, src, 20));
+// 	printf("%s\n", dest);
 
-	return (0);
-}
+// 	return (0);
+// }

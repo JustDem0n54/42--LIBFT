@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 10:54:24 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/13 11:38:59 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:50:53 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,12 @@ size_t ft_strlcpy(char *dest, const char *src, size_t n)
 	return (i);
 }
 
-
-int main(void)
-{
-	char dest[20] = "";
-	char src[] = "Hello World !";
-	printf("%s\n", dest);
-	ft_strlcpy(dest, src, 20);
-	printf("%s\n", dest);
-	return (0);
-}
+// int main(void)
+// {
+// 	char dest[20] = "";
+// 	char src[] = "Hello World !";
+// 	printf("%s\n", dest);
+// 	ft_strlcpy(dest, src, 20);
+// 	printf("%s\n", dest);
+// 	return (0);
+// }
