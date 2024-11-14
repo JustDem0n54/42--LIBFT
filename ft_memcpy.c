@@ -6,17 +6,17 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:22:03 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/13 10:49:47 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/14 10:03:24 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char *d;
-	unsigned const char *s;
-	
+	unsigned char		*d;
+	unsigned const char	*s;
+
 	d = dest;
 	s = src;
 	while (n > 0)

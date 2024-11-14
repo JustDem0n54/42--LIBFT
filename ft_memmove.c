@@ -6,17 +6,17 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 10:16:56 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/13 10:47:45 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/14 10:03:28 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *d;
-	const unsigned char *s;
-	
+	unsigned char		*d;
+	const unsigned char	*s;
+
 	d = dest;
 	s = src;
 	if (d < s)
@@ -35,7 +35,7 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 			*--d = *--s;
 		}
 	}
-	return(dest);
+	return (dest);
 }
 
 // #include <stdio.h>

@@ -6,16 +6,16 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:23:06 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/13 10:50:07 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/14 10:03:16 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s,  size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *str;
-	
+	unsigned char	*str;
+
 	str = s;
 	while (n > 0)
 	{
