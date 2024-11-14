@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 10:54:24 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/14 10:03:49 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:47:16 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	i = 0;
 	while (src[i])
 		i++;
+	if (n == 0)
+		return(i);
 	while (n-- > 1 && *src != '\0')
 		*dest++ = *src++;
 	*dest++ = '\0';
@@ -27,10 +29,10 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 
 // int main(void)
 // {
-// 	char dest[20] = "";
-// 	char src[] = "Hello World !";
+// 	char dest[] = "";
+// 	char src[] = "";
 // 	printf("%s\n", dest);
-// 	ft_strlcpy(dest, src, 20);
+// 	ft_strlcpy(dest, src, 0);
 // 	printf("%s\n", dest);
 // 	return (0);
 // }

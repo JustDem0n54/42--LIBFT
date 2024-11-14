@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 10:16:56 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/14 10:03:28 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:02:30 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	d = dest;
 	s = src;
+	if (d == s)
+		return (dest);
 	if (d < s)
 	{
 		while (n-- > 0)

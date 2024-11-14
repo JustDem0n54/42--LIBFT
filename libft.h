@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:11:49 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/14 09:58:50 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/14 17:33:09 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <string.h>
+# include <stdlib.h>
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -38,5 +39,6 @@ void	*ft_memchr(const void *str, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *str, const char *find, size_t len);
 int		ft_atoi(const char *str);
+void	*ft_calloc(size_t count, size_t size);
 
 #endif // __libft_h

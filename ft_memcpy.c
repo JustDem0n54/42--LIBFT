@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:22:03 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/14 10:03:24 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:01:42 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	d = dest;
 	s = src;
+	if (d == s)
+		return (dest);
 	while (n > 0)
 	{
 		*d++ = *s++;
