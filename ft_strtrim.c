@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 17:28:29 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/15 13:42:02 by nrontard         ###   ########.fr       */
+/*   Created: 2024/11/15 13:43:46 by nrontard          #+#    #+#             */
+/*   Updated: 2024/11/15 14:44:41 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	void	*str;
+	char	*str;
+	int		fin;
+	int		debut;
 
-	if (count == 0 || size == 0 || count * size / size != count)
+	debut = 0;
+	fin = ft_strlen(s1);
+	if (s1 == NULL || set == NULL)
 		return (NULL);
-	str = (void *)malloc(count * size);
-	if (str == NULL)
-		return (NULL);
-	ft_bzero(str, count * size);
+	while (debut <= fin && ft_strchr(set, s1[debut]))
+		debut++;
+	while (fin >= debut && ft_strchr(set, s1[fin]))
+		fin--;
+	str = ft_substr(s1, debut, fin - debut + 1);
 	return (str);
 }
+
+// int main(void)
+// {
+// 	printf("%s", ft_strtrim("oauaouaouoauouaBonjour a tous !oauouaouaouaouau", "oau"));
+// 	return (0);
+// }

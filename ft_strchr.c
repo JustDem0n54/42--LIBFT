@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:21:59 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/14 14:36:46 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/15 13:42:43 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *str, int c)
 	while (str[i] != '\0' && str[i] != (char)c)
 		i++;
 	if (str[i] == (char)c)
-			return ((char *)&str[i]);
+		return ((char *)&str[i]);
 	return (NULL);
 }
 
