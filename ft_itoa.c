@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:33:46 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/15 17:32:27 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:11:34 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ size_t	ft_strlenint(long n)
 	{
 		n = n / 10;
 		i++;
-	}	
+	}
 	return (i + 1);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	int len;
-	char *str;
-	long nb;
+	int		len;
+	char	*str;
+	long	nb;
 
 	nb = n;
 	len = ft_strlenint(nb);

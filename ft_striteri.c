@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/15 13:43:46 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/18 13:09:38 by nrontard         ###   ########.fr       */
+/*   Created: 2024/11/18 11:01:01 by nrontard          #+#    #+#             */
+/*   Updated: 2024/11/18 13:12:14 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*str;
-	int		fin;
-	int		debut;
+	unsigned int	i;
 
-	debut = 0;
-	fin = ft_strlen(s1);
-	if (s1 == NULL || set == NULL)
-		return (NULL);
-	while (debut <= fin && ft_strchr(set, s1[debut]))
-		debut++;
-	while (fin >= debut && ft_strchr(set, s1[fin]))
-		fin--;
-	str = ft_substr(s1, debut, fin - debut + 1);
-	return (str);
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
+
+// void myfonction(unsigned int i, char *s)
+// {
+// 	while (s[i])
+// 	{
+// 		write(1, &s[i], 1);
+// 		i++;
+// 	}
+// }
 
 // int main(void)
 // {
-// 	printf("%s", ft_strtrim("oauauouaBonjour a tous !oauouaou", "oau"));
-// 	return (0);
+// 	char str[8] = "Bonjour";
+
+// 	ft_striteri(str, myfonction);
 // }
