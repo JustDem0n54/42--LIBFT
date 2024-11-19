@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:58:13 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/18 14:32:40 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:27:30 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // t_list	*ft_lstnew(void *content)
 // {
 // 	t_list *new;
-	
+
 // 	new = malloc(sizeof(t_list));
 // 	if (new == NULL)
 // 		return (NULL);

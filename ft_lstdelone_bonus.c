@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 17:35:49 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/18 17:50:40 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:28:06 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst == NULL || del == NULL)
-		return;
+		return ;
 	(*del)(lst->content);
 	free(lst);
 }
@@ -23,7 +23,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 // t_list	*ft_lstnew(void *content)
 // {
 // 	t_list *new;
-	
+
 // 	new = malloc(sizeof(t_list));
 // 	if (new == NULL)
 // 		return (NULL);

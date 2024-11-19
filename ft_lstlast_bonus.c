@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:05:45 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/18 15:17:39 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:26:41 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_lstlast(t_list *lst)
 // t_list	*ft_lstnew(void *content)
 // {
 // 	t_list *new;
-	
+
 // 	new = malloc(sizeof(t_list));
 // 	if (new == NULL)
 // 		return (NULL);
@@ -50,7 +50,6 @@ t_list	*ft_lstlast(t_list *lst)
 //     t_list *node1 = ft_lstnew(&a);
 //     t_list *node2 = ft_lstnew(&b);
 //     t_list *node3 = ft_lstnew(&c);
-	
 //     node1->next = node2;
 //     node2->next = node3;
 // 	print_int_list(ft_lstlast(node1));

@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:28:29 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/18 16:32:57 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:27:44 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*str;
 
 	if (count == 0 || size == 0 || count * size / size != count)
-	{	
+	{
 		str = malloc(0);
 		return (str);
 	}

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:33:33 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/18 15:03:19 by nrontard         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:27:09 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (lst != NULL)
@@ -28,7 +28,7 @@ int	ft_lstsize(t_list *lst)
 // t_list	*ft_lstnew(void *content)
 // {
 // 	t_list *new;
-	
+
 // 	new = malloc(sizeof(t_list));
 // 	if (new == NULL)
 // 		return (NULL);

@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 16:34:28 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/19 11:29:33 by nrontard         ###   ########.fr       */
+/*   Created: 2024/11/19 10:22:35 by nrontard          #+#    #+#             */
+/*   Updated: 2024/11/19 11:29:49 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*temp;
-
-	if (lst == NULL || new == NULL)
+	if (lst == NULL)
 		return ;
-	if (*lst == NULL)
+	while (lst != NULL)
 	{
-		*lst = new;
-		return ;
+		f(lst->content);
+		lst = lst->next;
 	}
-	temp = ft_lstlast(*lst);
-	temp->next = new;
 }
 
-// t_list	*ft_lstnew(void *content)
+// void my_f(t_list *lst)
 // {
-// 	t_list *new;
-
-// 	new = malloc(sizeof(t_list));
-// 	if (new == NULL)
-// 		return (NULL);
-// 	new->content = content;
-// 	new->next = NULL;
-// 	return (new);
+// 	printf("%d ", lst->content);
 // }
 
 // void print_int_list(t_list *head)
@@ -53,13 +42,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // int main()
 // {
 //     int a = 42, b = 21, c = 84;
+
 //     t_list *node1 = ft_lstnew(&a);
 //     t_list *node2 = ft_lstnew(&b);
 //     t_list *node3 = ft_lstnew(&c);
 //     node1->next = node2;
 //     node2->next = node3;
-// 	int d = 99;
-// 	ft_lstadd_back(&node1, ft_lstnew(&d));
-//     print_int_list(node1);
+//     ft_lstiter(node1, my_f);
 //     return 0;
 // }

@@ -1,42 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 16:34:28 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/19 11:29:33 by nrontard         ###   ########.fr       */
+/*   Created: 2024/11/19 10:46:11 by nrontard          #+#    #+#             */
+/*   Updated: 2024/11/19 11:29:59 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*temp;
+	t_list	*new;
+	t_list	*tmp;
+	void	*content;
 
-	if (lst == NULL || new == NULL)
-		return ;
-	if (*lst == NULL)
+	if (f == NULL || del == NULL || lst == NULL)
+		return (NULL);
+	new = NULL;
+	while (lst != NULL)
 	{
-		*lst = new;
-		return ;
+		content = lst->content;
+		tmp = ft_lstnew(f(content));
+		if (!tmp)
+		{
+			(del)(content);
+			ft_lstclear(&new, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new, tmp);
+		lst = lst->next;
 	}
-	temp = ft_lstlast(*lst);
-	temp->next = new;
+	tmp->next = NULL;
+	return (new);
 }
 
-// t_list	*ft_lstnew(void *content)
+// void del(void *content)
 // {
-// 	t_list *new;
+// 	free(content);
+// }
 
-// 	new = malloc(sizeof(t_list));
-// 	if (new == NULL)
-// 		return (NULL);
-// 	new->content = content;
-// 	new->next = NULL;
-// 	return (new);
+// void *my_fonct(void *c)
+// {
+// 	c = c +20;
+// 	return (c);
 // }
 
 // void print_int_list(t_list *head)
@@ -53,13 +63,14 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // int main()
 // {
 //     int a = 42, b = 21, c = 84;
-//     t_list *node1 = ft_lstnew(&a);
+
+//     t_list *new;
+// 	t_list *node1 = ft_lstnew(&a);
 //     t_list *node2 = ft_lstnew(&b);
 //     t_list *node3 = ft_lstnew(&c);
 //     node1->next = node2;
 //     node2->next = node3;
-// 	int d = 99;
-// 	ft_lstadd_back(&node1, ft_lstnew(&d));
-//     print_int_list(node1);
+// 	new = ft_lstmap(node1, my_fonct, del);
+// 	print_int_list(new);
 //     return 0;
 // }
