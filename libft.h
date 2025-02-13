@@ -6,7 +6,7 @@
 /*   By: nrontard <nrontard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:11:49 by nrontard          #+#    #+#             */
-/*   Updated: 2024/11/19 11:17:59 by nrontard         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:57:06 by nrontard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
+# include "get_next_line_bonus.h"
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -52,6 +53,9 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int		ft_strnjoinlen(int size, char **strs, char *sep);
+char	*ft_strnjoin(int size, char **strs, char *sep);
+char	*ft_strjoincpy(char **strs, char *result, char *sep, int size);
 
 typedef struct s_list
 {
